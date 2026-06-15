@@ -129,16 +129,46 @@ const css = `
   .nav-ig svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 1.8; }
 
   /* HERO — fullscreen opening section */
-  .hero { position: relative; width: 100%; min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; }
+  .hero { position: relative; width: 100%; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
   .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
   .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(8,8,9,.15) 0%, rgba(8,8,9,.05) 25%, rgba(8,8,9,.55) 65%, rgba(8,8,9,.97) 100%); }
   .scan-line { position: absolute; left: 0; right: 0; height: 1px; background: var(--red); opacity: 0; animation: scan 2.4s ease-out .3s forwards; }
   @keyframes scan { 0% { top: 0%; opacity: 0; } 10% { opacity: .8; } 85% { opacity: .4; } 100% { top: 100%; opacity: 0; } }
   .hero-content { position: relative; z-index: 2; padding: 0 48px 56px; max-width: 960px; margin: 0 auto; text-align: center; }
-  .hero-eyebrow { font-size: 11px; letter-spacing: .25em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; font-weight: 500; }
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--red);
+    background: rgba(8, 8, 9, 0.55);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
   .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(56px, 10vw, 116px); line-height: .9; letter-spacing: .01em; color: #fff; margin-bottom: 22px; }
   .hero-title span { color: var(--red); }
-  .hero-meta { display: flex; gap: 24px; flex-wrap: wrap; align-items: flex-start; }
+  .hero-meta {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background: rgba(8, 8, 9, 0.55);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+
+  padding: 18px 28px;
+  border-radius: 10px;
+
+  width: fit-content;
+  margin: 0 auto;
+    }
   .hero-stat { display: flex; flex-direction: column; gap: 2px; }
   .hs-label { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--chrome); }
   .hs-val { font-size: 13px; font-weight: 500; color: var(--platinum); }
@@ -159,7 +189,19 @@ const css = `
   .ba-wrap { position: relative; width: 100%; max-width: 900px; border-radius: 8px; overflow: hidden; user-select: none; touch-action: pan-y; cursor: col-resize; line-height: 0; }
   .ba-base { display: block; width: 100%; height: auto; pointer-events: none; }
   .ba-current-clip { position: absolute; top: 0; left: 0; height: 100%; overflow: hidden; }
-  .ba-current-clip img { position: absolute; top: 0; left: 0; width: 900px; max-width: none; height: 100%; object-fit: cover; object-position: left center; pointer-events: none; }
+
+  .ba-current-clip img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+    pointer-events: none;
+  }
+
   .ba-divider { position: absolute; top: 0; bottom: 0; width: 2px; background: #fff; transform: translateX(-50%); pointer-events: none; z-index: 3; }
   .ba-handle { position: absolute; top: 50%; width: 40px; height: 40px; background: #fff; border-radius: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; z-index: 4; box-shadow: 0 2px 12px rgba(0,0,0,.5); pointer-events: none; }
   .ba-handle svg { width: 18px; height: 18px; stroke: #080809; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
@@ -295,7 +337,7 @@ function Hero() {
           <div className="hero-stat"><div className="hs-label">Trans</div><div className="hs-val">6-Speed Manual</div></div>
           <div className="hs-div" />
           <div className="hero-stat"><div className="hs-label">Purchased</div><div className="hs-val">September 2025</div></div>
-          <div className="hs-div" />
+          {/* <div className="hs-div" /> */}
           {/* <div className="hero-stat">
             <div className="hs-label">Instagram</div>
             <a href="https://instagram.com/wasfl5" target="_blank" rel="noreferrer" className="hero-ig">
