@@ -232,7 +232,7 @@ const css = `
   /* BUILD LIST */
   .mod-cat { margin-bottom: 44px; }
   .cat-lbl { font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--chrome); padding-bottom: 12px; border-bottom: .5px solid var(--border); margin-bottom: 4px; }
-  .mod-item { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: start; padding: 14px 0; border-bottom: .5px solid var(--border); transition: border-color .2s; }
+  .mod-item { display: grid; grid-template-columns: 1fr auto; align-items: start; padding: 14px 0; border-bottom: .5px solid var(--border); transition: border-color .2s; }
   .mod-item:hover { border-color: var(--bh); }
   .mod-item:last-child { border-bottom: none; }
   .mod-name  { font-size: 14px; font-weight: 500; color: var(--platinum); margin-bottom: 2px; }
@@ -536,16 +536,16 @@ function BuildList() {
                 <div className="mod-brand">{m.brand}</div>
                 {m.desc && <div className="mod-desc">{m.desc}</div>}
               </div>
-              {SHOW_PRICES && (
+              {/* {SHOW_PRICES && (
                 <div className="mod-cost">
                   ${m.cost.toLocaleString("en-US", { minimumFractionDigits: 2 })}
                 </div>
-              )}
+              )} */}
             </div>
           ))}
         </div>
       ))}
-      {SHOW_PRICES && (
+      {/* {SHOW_PRICES && (
         <div className="total-bar" style={{ display: "flex", flexDirection: "column" }}>
           <span className="total-lbl">Total Invested</span>
           <span className="total-lbl">  (minus installations)</span>
@@ -553,7 +553,7 @@ function BuildList() {
             ${total.toLocaleString("en-US", { minimumFractionDigits: 2 })}
           </span>
         </div>
-      )}
+      )} */}
     </section>
   );
 }
