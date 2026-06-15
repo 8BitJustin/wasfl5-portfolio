@@ -157,18 +157,16 @@ const css = `
     gap: 24px;
     flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: center;
     background: rgba(8, 8, 9, 0.55);
-  backdrop-filter: blur(8px);
-
-  border: 1px solid rgba(255,255,255,.08);
-  box-shadow: 0 8px 24px rgba(0,0,0,.25);
-
-  padding: 18px 28px;
-  border-radius: 10px;
-
-  width: fit-content;
-  margin: 0 auto;
-    }
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    padding: 18px 28px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 0 auto;
+  }
   .hero-stat { display: flex; flex-direction: column; gap: 2px; }
   .hs-label { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--chrome); }
   .hs-val { font-size: 13px; font-weight: 500; color: var(--platinum); }
