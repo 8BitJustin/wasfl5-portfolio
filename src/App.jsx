@@ -127,6 +127,25 @@ const css = `
   .nav-ig { display: flex; align-items: center; gap: 5px; color: var(--muted); text-decoration: none; font-size: 12px; transition: color .2s; }
   .nav-ig:hover { color: var(--platinum); }
   .nav-ig svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+  .nav-hamburger {
+    display: none; /* desktop hidden */
+    flex-direction: column;
+    gap: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+  }
+
+  .nav-hamburger span {
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    display: block;
+  }
+  .mobile-menu {
+    display: none; /* 👈 ADD THIS */
+  }
 
   /* HERO — fullscreen opening section */
   .hero { position: relative; width: 100%; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
@@ -255,22 +274,67 @@ const css = `
 
   /* MOBILE */
   @media (max-width: 768px) {
-    .nav { padding: 14px 20px; }
-    .nav-links { display: none; }
-    .nav-ig span { display: none; }
-    .hero-content { padding: 0 20px 36px; }
-    .hero-meta { gap: 16px; }
-    .hs-div { display: none; }
-    .section { padding: 60px 20px; }
-    .ba-section { padding: 60px 0; }
-    .ba-inner { padding: 0 20px; }
-    .up-section { padding: 60px 0; }
-    .up-inner { padding: 0 20px; }
-    .up-grid { grid-template-columns: 1fr 1fr; }
-    .gal-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
-    .footer { padding: 22px 20px; flex-direction: column; gap: 10px; text-align: center; }
-    .footer-mark { display: none; }
+
+  .nav {
+    padding: 14px 20px;
   }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-ig span {
+    display: none;
+  }
+
+  /* 🔥 ADD THIS */
+  .nav-hamburger {
+    display: flex;
+  }
+
+  /* 📱 MOBILE MENU PANEL */
+  .mobile-menu {
+    position: fixed;
+    top: 64px;
+    left: 20px;
+    right: 20px;
+
+    background: rgba(8,8,9,.95);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 12px;
+
+    padding: 18px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+
+    transition: all .25s ease;
+  }
+
+  .mobile-menu.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .mobile-menu a {
+    color: var(--chrome);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+
+  .mobile-menu a:hover {
+    color: #fff;
+  }
+}
   @media (max-width: 480px) {
     .up-grid  { grid-template-columns: 1fr; }
     .gal-grid { grid-template-columns: 1fr; }
@@ -290,25 +354,58 @@ const IgIcon = () => (
 // Fixed top navigation. Gains a frosted background on scroll.
 function Nav() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // 👈 ADD THIS
+
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", fn, { passive: true });
     return () => window.removeEventListener("scroll", fn);
   }, []);
+
   return (
     <nav className={"nav" + (scrolled ? " scrolled" : "")}>
-      <div className="nav-logo">WASFL5 · <span>TYPE S</span></div>
+
+      <div className="nav-logo">
+        WASFL5 · <span>TYPE S</span>
+      </div>
+
       <div className="nav-right">
+
+        <button
+          className="nav-hamburger"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Menu"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
         <ul className="nav-links">
           <li><a href="#before-after">Before/After</a></li>
           <li><a href="#mods">Build List</a></li>
           <li><a href="#upcoming">Upcoming</a></li>
           <li><a href="#gallery">Gallery</a></li>
         </ul>
-        <a href="https://instagram.com/wasfl5" target="_blank" rel="noreferrer" className="nav-ig">
-          <IgIcon /><span>wasfl5</span>
+
+        <a
+          href="https://instagram.com/wasfl5"
+          target="_blank"
+          rel="noreferrer"
+          className="nav-ig"
+        >
+          <IgIcon />
+          <span>wasfl5</span>
         </a>
       </div>
+
+      <div className={"mobile-menu" + (menuOpen ? " open" : "")}>
+        <a href="#before-after" onClick={() => setMenuOpen(false)}>Before/After</a>
+        <a href="#mods" onClick={() => setMenuOpen(false)}>Build List</a>
+        <a href="#upcoming" onClick={() => setMenuOpen(false)}>Upcoming</a>
+        <a href="#gallery" onClick={() => setMenuOpen(false)}>Gallery</a>
+      </div>
+
     </nav>
   );
 }
