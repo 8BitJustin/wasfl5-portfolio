@@ -18,7 +18,8 @@ function BuildList() {
               <div>
                 <div className="mod-name">{m.name}</div>
                 <div className="mod-brand">{m.brand}</div>
-                {m.desc && <div className="mod-desc">{m.desc}</div>}
+                {m.desc1 && <div className="mod-desc">{m.desc1}</div>}
+                {m.desc2 && <div className="mod-desc">{m.desc2}</div>}
               </div>
               {/* {SHOW_PRICES && (
                 <div className="mod-cost">

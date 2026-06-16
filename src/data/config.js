@@ -40,7 +40,8 @@ export const MODS = {
   "Suspension": [
     { name: "Lowering Springs",
       brand: "Eibach",
-      desc: "Pro-Kit · Installed by CTech",
+      desc1: "Pro-Kit · Installed by CTech",
+      desc2: "Alignment by BSR Motorsports",
       cost: 465.48
     },
     // { name: "Springs Installation",
@@ -57,26 +58,26 @@ export const MODS = {
   "Wheels & Tires": [
     { name: "Wheel Spacers",
       brand: "Bonoss",
-      desc: "15mm front · 20mm rear",
+      desc1: "15mm front · 20mm rear",
       cost: 258.00
     },
   ],
   "Exterior": [
     { name: "Front Lip Splitter",
       brand: "BayOptics",
-      desc: "Gloss Black",
+      desc1: "Gloss Black",
       cost: 150.00
     },
     { name: "Side Skirts",
       brand: "Aeroflow Dynamics",
-      desc: "Gloss Black",
+      desc1: "Gloss Black",
       cost: 350.00
     },
   ],
   "Exterior Lighting": [
     { name: "Underglow Kit",
       brand: "ELGlow",
-      desc: "Universal RGB underglow",
+      desc1: "Universal RGB underglow",
       cost: 245.00
     },
   ],
