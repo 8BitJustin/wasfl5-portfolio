@@ -1,0 +1,35 @@
+/* BEFORE/AFTER SLIDER */
+.ba-section { padding: 80px 0; background: var(--surface); border-top: .5px solid var(--border); border-bottom: .5px solid var(--border); }
+.ba-inner { max-width: 1020px; margin: 0 auto; padding: 0 48px; text-align: center; }
+.ba-desc { font-size: 13px; color: var(--muted); margin-bottom: 28px; }
+.ba-wrap { position: relative; width: 100%; max-width: 900px; border-radius: 8px; overflow: hidden; user-select: none; touch-action: pan-y; cursor: col-resize; line-height: 0; }
+.ba-base { display: block; width: 100%; height: auto; pointer-events: none; }
+
+.ba-current-clip { position: absolute; top: 0; left: 0; height: 100%; overflow: hidden; }
+.ba-current-clip img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  pointer-events: none;
+}
+
+.ba-divider { position: absolute; top: 0; bottom: 0; width: 2px; background: #fff; transform: translateX(-50%); pointer-events: none; z-index: 3; }
+.ba-handle { position: absolute; top: 50%; width: 40px; height: 40px; background: #fff; border-radius: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; z-index: 4; box-shadow: 0 2px 12px rgba(0,0,0,.5); pointer-events: none; }
+.ba-handle svg { width: 18px; height: 18px; stroke: #080809; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Labels clipped inside their own half — vanish when that side collapses */
+.ba-current-label-wrap { position: absolute; top: 0; left: 0; bottom: 0; overflow: hidden; pointer-events: none; z-index: 5; }
+.ba-stock-label-wrap   { position: absolute; top: 0; bottom: 0; overflow: hidden; pointer-events: none; z-index: 5; }
+.ba-lbl { position: absolute; bottom: 14px; font-size: 14px; letter-spacing: .18em; text-transform: uppercase; font-weight: 600; padding: 10px 10px; border-radius: 3px; font-family: 'Inter', sans-serif; white-space: nowrap; }
+.ba-lbl-current { left: 14px;  background: rgba(200,16,46,.15); color: var(--red);    border: .5px solid rgba(200,16,46,.3); }
+.ba-lbl-stock   { right: 14px; background: rgba(8,8,9,.7);      color: var(--chrome); border: .5px solid var(--bh); }
+
+@media (max-width: 768px) {
+  .ba-section { padding: 60px 0; }
+  .ba-inner { padding: 0 20px; }
+}

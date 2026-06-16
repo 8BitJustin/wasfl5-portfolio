@@ -1,0 +1,13 @@
+/* BUILD LIST */
+.mod-cat { margin-bottom: 44px; }
+.cat-lbl { font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--chrome); padding-bottom: 12px; border-bottom: .5px solid var(--border); margin-bottom: 4px; }
+.mod-item { display: grid; grid-template-columns: 1fr auto; align-items: start; padding: 14px 0; border-bottom: .5px solid var(--border); transition: border-color .2s; }
+.mod-item:hover { border-color: var(--bh); }
+.mod-item:last-child { border-bottom: none; }
+.mod-name  { font-size: 14px; font-weight: 500; color: var(--platinum); margin-bottom: 2px; }
+.mod-brand { font-size: 12px; color: var(--chrome); }
+.mod-desc  { font-size: 12px; color: var(--muted); margin-top: 3px; }
+.mod-cost  { font-size: 13px; font-weight: 500; color: var(--platinum); white-space: nowrap; text-align: right; }
+.total-bar { display: flex; justify-content: space-between; align-items: center; padding: 18px 22px; background: var(--surface2); border: .5px solid var(--border); border-radius: 6px; margin-top: 32px; }
+.total-lbl { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--chrome); }
+.total-amt { font-family: 'Bebas Neue', sans-serif; font-size: 30px; letter-spacing: .04em; color: #fff; }

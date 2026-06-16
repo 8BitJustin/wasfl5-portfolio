@@ -1,0 +1,11 @@
+/* FOOTER */
+.footer { border-top: .5px solid var(--border); padding: 28px 48px; display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 12px; max-width: 1020px; margin: 0 auto; }
+.footer-ig { display: flex; align-items: center; gap: 6px; color: var(--muted); text-decoration: none; transition: color .2s; }
+.footer-ig:hover { color: var(--platinum); }
+.footer-ig svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+.footer-mark { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: .08em; color: var(--surface3); }
+
+@media (max-width: 768px) {
+  .footer { padding: 22px 20px; flex-direction: column; gap: 10px; text-align: center; }
+  .footer-mark { display: none; }
+}
