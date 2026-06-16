@@ -7,7 +7,7 @@ import "./Hero.css";
 // and car spec stats pinned to the bottom.
 function Hero() {
   return (
-    <div className="hero">
+    <div className="hero" id="home">
       <img className="hero-img" src={IMAGES.hero} alt="2025 Acura Integra Type S" />
       <div className="hero-overlay" />
       <div className="scan-line" />

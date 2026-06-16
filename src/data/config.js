@@ -88,10 +88,28 @@ export const MODS = {
 //  cat options: "Performance" | "Wheels & Tires" | "Exterior" | "Interior"
 // ============================================================
 export const UPCOMING = [
-  { name: "Exhaust System",      note: "Cat-back or axle-back, brand TBD",           cat: "Performance"    },
-  { name: "Intercooler Upgrade", note: "Target heat soak under hard driving",         cat: "Performance"    },
-  { name: "Wheel Upgrade",       note: "Lightweight forged set, TBD",                cat: "Wheels & Tires" },
-  { name: "Window Tint",         note: "Ceramic tint all around",                    cat: "Exterior"       },
-  { name: "Short Shifter",       note: "Tighten up the 6-speed throws",              cat: "Interior"       },
-  { name: "Intake",              note: "Cold air or short ram, under consideration", cat: "Performance"    },
+  { name: "Exhaust System",
+    note: "Cat-back or axle-back, brand TBD",
+    cat: "Performance"
+  },
+  { name: "Intercooler Upgrade",
+    note: "Target heat soak under hard driving",
+    cat: "Performance"
+  },
+  { name: "Wheel Upgrade",
+    note: "Lightweight forged set, TBD",
+    cat: "Wheels & Tires"
+  },
+  { name: "Rear Wing",
+    note: "Color matched",
+    cat: "Exterior"
+  },
+  { name: "Short Shifter",
+    note: "Tighten up the 6-speed throws",
+    cat: "Interior"
+  },
+  { name: "Intake",
+    note: "Cold air or short ram, under consideration",
+    cat: "Performance"
+  },
 ];

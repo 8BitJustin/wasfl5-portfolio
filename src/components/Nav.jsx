@@ -18,7 +18,7 @@ function Nav() {
     <nav className={"nav" + (scrolled ? " scrolled" : "")}>
 
       <div className="nav-logo">
-        WASFL5 · <span>TYPE S</span>
+        <a href="#home">WASFL5 · <span>TYPE S</span></a>
       </div>
 
       <div className="nav-right">
