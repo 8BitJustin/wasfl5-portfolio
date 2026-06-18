@@ -90,27 +90,27 @@ export const MODS = {
 // ============================================================
 export const UPCOMING = [
   { name: "Exhaust System",
-    note: "Cat-back or axle-back, brand TBD",
+    note: "27Won Cat-back exhaust",
     cat: "Performance"
   },
-  { name: "Intercooler Upgrade",
-    note: "Target heat soak under hard driving",
+  { name: "Tune",
+    note: "KTuner or Hondata..?",
     cat: "Performance"
   },
   { name: "Wheel Upgrade",
-    note: "Lightweight forged set, TBD",
+    note: "18in Work Emotion D9R",
     cat: "Wheels & Tires"
   },
   { name: "Rear Wing",
-    note: "Color matched",
+    note: "Epsilon+ Sport Wing, Color matched",
     cat: "Exterior"
   },
-  { name: "Short Shifter",
-    note: "Tighten up the 6-speed throws",
-    cat: "Interior"
-  },
+  // { name: "Short Shifter",
+  //   note: "Tighten up the 6-speed throws",
+  //   cat: "Interior"
+  // },
   { name: "Intake",
-    note: "Cold air or short ram, under consideration",
+    note: "27Won Hybrid Air Intake",
     cat: "Performance"
   },
 ];
