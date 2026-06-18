@@ -98,7 +98,7 @@ export const UPCOMING = [
     cat: "Performance"
   },
   { name: "Wheel Upgrade",
-    note: "18in Work Emotion D9R",
+    note: "19in. Work Emotion D9R",
     cat: "Wheels & Tires"
   },
   { name: "Rear Wing",
@@ -113,4 +113,9 @@ export const UPCOMING = [
     note: "27Won Hybrid Air Intake",
     cat: "Performance"
   },
+  { name: "Wrap",
+    note: "Eventually, color TBD",
+    cat: "Color"
+
+  }
 ];
