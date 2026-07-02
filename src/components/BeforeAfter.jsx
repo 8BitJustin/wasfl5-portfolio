@@ -8,7 +8,7 @@ import "./BeforeAfter.css";
 // Each label lives inside a clipping div matching its side —
 // it vanishes naturally when that side collapses to zero width.
 function BeforeAfter() {
-  const [pct, setPct] = useState(50); // slider position as % from left
+  const [pct, setPct] = useState(5); // slider position as % from left
   const dragging = useRef(false);
   const wrapRef  = useRef(null);
 
