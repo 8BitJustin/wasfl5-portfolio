@@ -17,14 +17,20 @@ export const IMAGES = {
   // Gallery photos — add or remove entries to update the gallery.
   // Each entry: { src: "/images/filename.jpg", caption: "Description" }
   gallery: [
-    { src: "/images/car001.jpg", caption: "Rear three-quarter" },
-    { src: "/images/car002.jpg", caption: "Front three-quarter" },
-    { src: "/images/car003.jpg", caption: "Front three-quarter" },
-    { src: "/images/car004.jpg", caption: "Front three-quarter" },
-    { src: "/images/car005.jpg", caption: "Front three-quarter" },
-    { src: "/images/car006.jpg", caption: "Front three-quarter" },
-    { src: "/images/car007.jpg", caption: "Front three-quarter" },
+    { src: "/images/car015.JPEG", caption: "Rear three-quarter" },
+    { src: "/images/car014.JPEG", caption: "Front three-quarter" },
+    { src: "/images/car013.jpg", caption: "Front three-quarter" },
+    { src: "/images/car011.jpg", caption: "Front three-quarter" },
+    { src: "/images/car010.JPEG", caption: "Front three-quarter" },
+    { src: "/images/car009.PNG", caption: "Front three-quarter" },
     { src: "/images/car008.jpg", caption: "Front three-quarter" },
+    { src: "/images/car007.jpg", caption: "Front three-quarter" },
+    { src: "/images/car006.jpg", caption: "Front three-quarter" },
+    { src: "/images/car005.jpg", caption: "Front three-quarter" },
+    { src: "/images/car004.jpg", caption: "Front three-quarter" },
+    { src: "/images/car003.jpg", caption: "Front three-quarter" },
+    { src: "/images/car002.jpg", caption: "Front three-quarter" },
+    { src: "/images/car001.jpg", caption: "Front three-quarter" },
   ],
 };
 
@@ -116,6 +122,5 @@ export const UPCOMING = [
   { name: "Wrap",
     note: "Eventually, color TBD",
     cat: "Color"
-
   }
 ];
